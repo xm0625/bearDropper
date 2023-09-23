@@ -1,5 +1,5 @@
 #!/bin/sh
-# https://github.com/robzr/bearDropper
+# https://github.com/xm0625/bearDropper
 # bearDropper install script - @robzr
 
 if [ -f /etc/init.d/bearDropper ] ; then
@@ -7,9 +7,9 @@ if [ -f /etc/init.d/bearDropper ] ; then
   /etc/init.d/bearDropper stop
 fi
 echo -e 'Retrieving and installing latest version'
-wget -qO /etc/init.d/bearDropper http://rawgit.com/robzr/bearDropper/master/src/init.d/bearDropper 
-wget -qO /etc/config/bearDropper http://rawgit.com/robzr/bearDropper/master/src/config/bearDropper
-wget -qO /usr/sbin/bearDropper http://rawgit.com/robzr/bearDropper/master/bearDropper
+wget -qO /etc/init.d/bearDropper https://raw.githubusercontent.com/xm0625/bearDropper/master/src/init.d/bearDropper 
+wget -qO /etc/config/bearDropper https://raw.githubusercontent.com/xm0625/bearDropper/master/src/config/bearDropper
+wget -qO /usr/sbin/bearDropper https://raw.githubusercontent.com/xm0625/bearDropper/master/bearDropper
 chmod 755 /usr/sbin/bearDropper /etc/init.d/bearDropper
 echo -e 'Processing historical log data (this can take a while)'
 /usr/sbin/bearDropper -m entire -f stdout
